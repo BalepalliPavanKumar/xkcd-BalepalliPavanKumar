@@ -5,13 +5,13 @@ on:
 
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Candidate's Code
         uses: actions/checkout@v4
       
-      - name: Run tests
+      - name: Run tests (GH Classroom Docker)
         uses: docker://ghcr.io/rtlearn/gh-classroom
 
       - name: Cleanup
